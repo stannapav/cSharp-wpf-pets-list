@@ -1,0 +1,47 @@
+﻿<Window x:Class="finalProject.View.CatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finalProject.View"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="CatWindow" Height="400" Width="700">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock Text="Let's make your cat ^-^" HorizontalAlignment="Center" FontSize="20"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Enter cat name: " FontSize="16" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+                    <TextBox Name="tbCatName" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="tbCatName_TextChanged"/>
+
+                    <TextBlock Grid.Row="1" Text="Enter your cats age: " FontSize="16" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+                    <TextBox Name="tbCatAge" Grid.Row="1" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="tbCatAge_TextChanged"/>
+
+                    <TextBlock Grid.Row="2" Text="Enter your cats breed: " FontSize="16" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+                    <TextBox Name="tbCatBreed" Grid.Row="2" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="tbCatBreed_TextChanged"/>
+
+                    <TextBlock Grid.Row="3" Text="Enter your cats fur color: " FontSize="16" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+                    <TextBox Name="tbCatFurColor" Grid.Row="3" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="tbCatFurColor_TextChanged"/>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Name="btnDone" Content="Done" Width="50" Height="25" Margin="0, 10, 0, 0" IsEnabled="False" Click="btnDone_Click"/>
+                    <Button Name="btnCancel" Content="Cancel" Width="50" Height="25" Margin="20, 10, 0, 0" Click="btnCancel_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="finalProject.View.PlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finalProject.View"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="FeedWindow" Height="400" Width="450">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="What are you going to play with your pet?" FontSize="20" Margin="0, 20, 0, 0"/>
+                <Button Name="btnFetch" Content="Fetch" Click="btnFetch_Click"/>
+                <Button Name="btnMouse" Content="Mouse" Click="btnMouse_Click"/>
+                <Button Name="btnWalk" Content="Walk" Click="btnWalk_Click"/>
+                <Button Name="btnBall" Content="Ball" Click="btnBall_Click"/>
+                <TextBlock Text="{Binding TxtPlay, UpdateSourceTrigger=PropertyChanged}" FontSize="18" Margin="0, 10, 0, 0" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
